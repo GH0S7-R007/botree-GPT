@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Field Example</title>
+  <style>
+    /* Add some basic styling to the search field */
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    input[type=text] {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+      margin-right: 10px;
+    }
+    button[type=button] {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+    button[type=button]:hover {
+      background-color: #0062cc;
+    }
+    /* Add some basic styling to the search result */
+    #search-result {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <input type="text" id="search-field" placeholder="Enter your search query">
+    <button type="button" onclick="search()">Search</button>
+  </form>
+  <div id="search-result"></div>
+  <script>
+    function search() {
+  var query = document.getElementById("search-field").value.toLowerCase();
+  if (query.includes("genie xl offline") || query.includes("genie offline") || query.includes("offline")) {
+    document.getElementById("search-result").innerHTML = "Genie xl is offline? Then we have to check these steps one by one:<br>1. Is services running on Task manager? <br>2. internet is connected? check with browser rdskytech.com page is loading or not<br>3.Check date and time is proper. <br><b>Share the Genie XL log in the backend group and tag @techops if you are unable to find the exact issue";
+  } else if (query.includes("p is red") || query.includes("p is not green") || query.includes("p is not green")) {
+    document.getElementById("search-result").innerHTML = "If P not in green then check these steps one by one<br>1. Genie XL online? make it online.<br>2. Make sure Promo enabled-and promo limit is not zero.<br> 3. Make sure data is in sync. Use sync data option from the jarvis if require.<br> 4. Restart the services once again.<br><b>Share the Widget log in the backend group and tag @techops if you are unable to find the exact issue";
+  } else {
+    document.getElementById("search-result").innerHTML = "No results found for your search query. Please use keys like, Genie XL offline, P is Green, Transaction Completed message not flashing, QR not Printing...etc";
+} 
+}
+
+</script>
+</body>
+</html>
