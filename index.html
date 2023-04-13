@@ -50,8 +50,8 @@
     }
   </style>
 <div>
-  <input id="search-field" type="text" placeholder="Search...">
-  <button type="button" onclick="search()">Search</button>
+  <input id="search-field" type="text" placeholder="">
+  <button type="button" onclick="search()">ask</button>
 </div>
 
 <div id="search-result"></div></center>
@@ -67,6 +67,7 @@
 case query.includes("The device"):
 case query.includes("device offline"):
 case query.includes("genie xl online"):
+case query.includes("genie xl"):
         const typingText = document.getElementById("search-result");
         typingText.innerHTML = '<p id="typing-text" style="color: blue;"></p>';
 
@@ -115,6 +116,88 @@ case query.includes("genie xl online"):
         // call the function to start typing the text
         typeText2();
         break;
+
+      case query.includes("data not uploading"):
+	case query.includes("data uploading issue"):
+		case query.includes("data upload"):
+			case query.includes("bill not uploading"):
+	case query.includes("bill is not uploading"):
+	case query.includes("data not upload"):
+	case query.includes("data is not upload"):
+        const typingText3 = document.getElementById("search-result");
+        typingText3.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text3 = "you mean the number of counts are not updating in the jarvis health?. Then check the following steps. Make sure the bill is printing via CutePDF. Genie XL device should be in online then only data will upload. check genie xl log if both steps are working properly. ask me the error word u found from genie xl log, then i can provide the solution. else seek backend team help.";
+        // define the typing speed in milliseconds
+        const speed3 = 25;
+
+        // define a function to type the text
+        function typeText3() {
+          for (let i = 0; i < text3.length; i++) {
+            setTimeout(function() {
+              typingText3.innerHTML += text3[i];
+            }, i * speed3);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText3();
+        break;
+case query.includes("promo not working"):
+	case query.includes("promo is not working"):
+		case query.includes("promo coupon not"):
+			case query.includes("promo"):
+	case query.includes("promotion coupon"):
+        const typingText4 = document.getElementById("search-result");
+        typingText4.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text4 = "oops! im not clear about your question! anyway you suppose to check these steps. is your Genie online and uploading data to the jarvis? check the parsing status if yes. cross check the promo item barcode and make sure the product have minimum promo limit on widget reports. Check the logs and note errors and share with techops team. they will provide solution.";
+      // define the typing speed in milliseconds";
+        const speed4 = 25;
+
+        // define a function to type the text
+        function typeText4() {
+          for (let i = 0; i < text4.length; i++) {
+            setTimeout(function() {
+              typingText4.innerHTML += text4[i];
+            }, i * speed4);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText4();
+        break;
+
+
+case query.includes("qr"):
+	case query.includes("qr not"):
+		case query.includes("rq code"):
+			case query.includes("qr promo"):
+	case query.includes("qr coupon"):
+        const typingText5 = document.getElementById("search-result");
+        typingText5.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text5 = "oops! im not clear about your question! anyway you suppose to check these steps. is your Genie online and uploading data to the jarvis? check the parsing status if yes. cross check the promo item barcode and make sure the product have minimum promo limit on widget reports. Check the logs and note errors and share with techops team. they will provide solution.";
+      // define the typing speed in milliseconds";
+        const speed5 = 25;
+
+        // define a function to type the text
+        function typeText5() {
+          for (let i = 0; i < text5.length; i++) {
+            setTimeout(function() {
+              typingText5.innerHTML += text5[i];
+            }, i * speed5);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText5();
+        break;
+
+
       default:
         document.getElementById("search-result").innerHTML = "Im sorry!i did not understand your requirements. please use key words like Genie xl, p is red, Qr not printed. else ask How to make genie xl online or why genie xl offline ";
     }
