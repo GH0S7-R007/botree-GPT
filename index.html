@@ -1,8 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Search Field Example</title>
-  <style>
+
+<center>
+<h1 style="font-size: 30px; color: blue;"> Hi, I'm Tessa!</h1>
+<p style="font-size: 30px; color: blue;">Feel free to ask anything related to Tech Ops</p>
+
+ <style>
+#page-content {
+      background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=996&t=st=1681361586~exp=1681362186~hmac=b8189146a887d46ab4c03ee36377112ae84cfa9a618283686e385db376b90a0c");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     /* Add some basic styling to the search field */
     form {
       display: flex;
@@ -38,25 +49,74 @@
       font-size: 16px;
     }
   </style>
-</head>
-<body>
-  <form>
-    <input type="text" id="search-field" placeholder="Enter your search query">
-    <button type="button" onclick="search()">Search</button>
-  </form>
-  <div id="search-result"></div>
-  <script>
-    function search() {
-  var query = document.getElementById("search-field").value.toLowerCase();
-  if (query.includes("genie xl offline") || query.includes("genie offline") || query.includes("offline")) {
-    document.getElementById("search-result").innerHTML = "Genie xl is offline? Then we have to check these steps one by one:<br>1. Is services running on Task manager? <br>2. internet is connected? check with browser rdskytech.com page is loading or not<br>3.Check date and time is proper. <br><b>Share the Genie XL log in the backend group and tag @techops if you are unable to find the exact issue";
-  } else if (query.includes("p is red") || query.includes("p is not green") || query.includes("p is not green")) {
-    document.getElementById("search-result").innerHTML = "If P not in green then check these steps one by one<br>1. Genie XL online? make it online.<br>2. Make sure Promo enabled-and promo limit is not zero.<br> 3. Make sure data is in sync. Use sync data option from the jarvis if require.<br> 4. Restart the services once again.<br><b>Share the Widget log in the backend group and tag @techops if you are unable to find the exact issue";
-  } else {
-    document.getElementById("search-result").innerHTML = "No results found for your search query. Please use keys like, Genie XL offline, P is Green, Transaction Completed message not flashing, QR not Printing...etc";
-} 
-}
+<div>
+  <input id="search-field" type="text" placeholder="Search...">
+  <button type="button" onclick="search()">Search</button>
+</div>
 
+<div id="search-result"></div></center>
+
+<script>
+  function search() {
+    var query = document.getElementById("search-field").value.toLowerCase();
+    switch (true) {
+      case query.includes("genie xl offline"):
+      case query.includes("genie offline"):
+      case query.includes("offline"):
+	case query.includes("The genie"):
+case query.includes("The device"):
+case query.includes("device offline"):
+case query.includes("genie xl online"):
+        const typingText = document.getElementById("search-result");
+        typingText.innerHTML = '<p id="typing-text" style="color: blue;"></p>';
+
+        // define the text to be typed
+       const text = "Oh is Genie xl offline? Then we have to check these steps one by one.  First check services running on Task manager? do needfull if not running.  Then make sure Internet is connected to the system.  Open any browser and try rdskytech.com page is loading or not.  Do need full if there is internet related issue.  Need to Check date and time is proper.  Some times that also will be there reason of Genie XL offline.  Last troubleshooting steps is Checking the genie XL log and observer any kind of error words are there.  Share the exact word with me if you found an error in the log. Then i can say what you have to do.Do this step at the end stage, Share the Genie XL log in the backend group and tag @techops if you are unable to find the exact issue";
+
+ // define the typing speed in milliseconds
+        const speed = 25;
+
+        // define a function to type the text
+        function typeText() {
+          for (let i = 0; i < text.length; i++) {
+            setTimeout(function() {
+              typingText.innerHTML += text[i];
+            }, i * speed);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText();
+        break;
+      case query.includes("p is not green"):
+	case query.includes("p red issue"):
+		case query.includes("p is red"):
+			case query.includes("p is not green"):
+	case query.includes("p red"):
+	case query.includes("p is in not green"):
+        const typingText2 = document.getElementById("search-result");
+        typingText2.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text2 = "Okay! If P not in green then check these steps one by one. Check the Genie XL is online? make it online if offline. Also Make sure Promo enabled-and promo limit is not zero.Jarvis data is in sync?. Use sync data option from the jarvis if require.Then Restart the services once again.Else Share the Widget log in the backend group and tag @techops if you are unable to find the exact issue";
+
+        // define the typing speed in milliseconds
+        const speed2 = 25;
+
+        // define a function to type the text
+        function typeText2() {
+          for (let i = 0; i < text2.length; i++) {
+            setTimeout(function() {
+              typingText2.innerHTML += text2[i];
+            }, i * speed2);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText2();
+        break;
+      default:
+        document.getElementById("search-result").innerHTML = "Im sorry!i did not understand your requirements. please use key words like Genie xl, p is red, Qr not printed. else ask How to make genie xl online or why genie xl offline ";
+    }
+  }
 </script>
-</body>
-</html>
