@@ -1,22 +1,18 @@
-
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <center>
 <h1 style="font-size: 30px; color: blue;"> Hi, I'm Tessa!</h1>
 <p style="font-size: 30px; color: blue;">Feel free to ask anything related to Tech Ops</p>
 
  <style>
-#page-content {
-      background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=996&t=st=1681361586~exp=1681362186~hmac=b8189146a887d46ab4c03ee36377112ae84cfa9a618283686e385db376b90a0c");
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+
+    @media (max-width: 768px) {
+  /* styles for screens smaller than 768px */
+}
     /* Add some basic styling to the search field */
     form {
-      display: flex;
+      display: block;
       align-items: center;
       justify-content: center;
       margin-top: 50px;
@@ -50,7 +46,7 @@
     }
   </style>
 <div>
-  <input id="search-field" type="text" placeholder="">
+  <input id="search-field" type="text" placeholder="start asking here">
   <button type="button" onclick="search()">ask</button>
 </div>
 
@@ -180,7 +176,7 @@ case query.includes("qr"):
         typingText5.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
-        const text5 = "oops! im not clear about your question! anyway you suppose to check these steps. is your Genie online and uploading data to the jarvis? check the parsing status if yes. cross check the promo item barcode and make sure the product have minimum promo limit on widget reports. Check the logs and note errors and share with techops team. they will provide solution.";
+        const text5 = "Okay! We should check the data is uploading to the jarvis and its parsing properly. Tranasaction Completed message is flashing means the bill is parsing. So the QR will generate on the system if mentioned steps are working properly. Need to check the logs to figer out the reason for QR code printing. Ask me the error code you found in the log then i can help you. else take help from techops team!";
       // define the typing speed in milliseconds";
         const speed5 = 25;
 
@@ -197,9 +193,105 @@ case query.includes("qr"):
         typeText5();
         break;
 
+case query.includes("techops"):
+	case query.includes("backend"):
+		case query.includes("back end"):
+			case query.includes("backend team"):
+	case query.includes("team"):
+case query.includes("who"):
+        const typingText6 = document.getElementById("search-result");
+        typingText6.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text6 = " Our backend team members are Vishnu saji, Ranjeet mandal, Prakash Devaiah ,Yogen Solanki, Mohammad Sadan and Mirza Rahman. You can reach out to them for ny kind of technical issues. You should post your issues in backend group and tag @techops. can expect solution as soon as possible!";
+      // define the typing speed in milliseconds";
+        const speed6 = 25;
+
+        // define a function to type the text
+        function typeText6() {
+          for (let i = 0; i < text6.length; i++) {
+            setTimeout(function() {
+              typingText6.innerHTML += text6[i];
+            }, i * speed6);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText6();
+        break;
+case query.includes("upgrade box"):
+	case query.includes("upgrade genie"):
+		case query.includes("widget upgrade"):
+			case query.includes("upgrade"):
+        const typingText7 = document.getElementById("search-result");
+        typingText6.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text7 = "Oh sorry! i canot say this to you. Because you cant do it until unless a backend access. Contact @techops for such cases.";
+     // define the typing speed in milliseconds";
+        const speed7 = 25;
+
+        // define a function to type the text
+        function typeText7() {
+          for (let i = 0; i < text7.length; i++) {
+            setTimeout(function() {
+              typingText7.innerHTML += text7[i];
+            }, i * speed7);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText7();
+        break;
+case query.includes("bill skiping"):
+	case query.includes("skip"):
+		case query.includes("50<"):
+			case query.includes("50"):
+        const typingText7 = document.getElementById("search-result");
+        typingText6.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text7 = "Hmmm! Enable normal ocr and try again for a fresh bill. Reachout techops team if need more help.";
+     // define the typing speed in milliseconds";
+        const speed7 = 25;
+
+        // define a function to type the text
+        function typeText7() {
+          for (let i = 0; i < text7.length; i++) {
+            setTimeout(function() {
+              typingText7.innerHTML += text7[i];
+            }, i * speed7);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText7();
+        break;
+case query.includes("404"):
+	case query.includes("424"):
+        const typingText8 = document.getElementById("search-result");
+        typingText6.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text8 = "Need to Re-register the device and Genie xl 8.7. Then this will resolve.";
+     // define the typing speed in milliseconds";
+        const speed8 = 25;
+
+        // define a function to type the text
+        function typeText8() {
+          for (let i = 0; i < text8.length; i++) {
+            setTimeout(function() {
+              typingText8.innerHTML += text8[i];
+            }, i * speed8);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText8();
+        break;
 
       default:
-        document.getElementById("search-result").innerHTML = "Im sorry!i did not understand your requirements. please use key words like Genie xl, p is red, Qr not printed. else ask How to make genie xl online or why genie xl offline ";
+        document.getElementById("search-result").innerHTML = "oh oh! iam not aware about that.";
     }
   }
 </script>
