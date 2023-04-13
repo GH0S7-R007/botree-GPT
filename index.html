@@ -46,7 +46,7 @@
     }
   </style>
 <div>
-  <input id="search-field" type="text" placeholder="start asking here">
+  <input id="search-field" type="text" placeholder="ask!">
   <button type="button" onclick="search()">ask</button>
 </div>
 
@@ -224,7 +224,7 @@ case query.includes("upgrade box"):
 		case query.includes("widget upgrade"):
 			case query.includes("upgrade"):
         const typingText7 = document.getElementById("search-result");
-        typingText6.innerHTML = '<p id="typing-text"></p>';
+        typingText7.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
         const text7 = "Oh sorry! i canot say this to you. Because you cant do it until unless a backend access. Contact @techops for such cases.";
@@ -247,33 +247,11 @@ case query.includes("bill skiping"):
 	case query.includes("skip"):
 		case query.includes("50<"):
 			case query.includes("50"):
-        const typingText7 = document.getElementById("search-result");
-        typingText6.innerHTML = '<p id="typing-text"></p>';
-
-        // define the text to be typed
-        const text7 = "Hmmm! Enable normal ocr and try again for a fresh bill. Reachout techops team if need more help.";
-     // define the typing speed in milliseconds";
-        const speed7 = 25;
-
-        // define a function to type the text
-        function typeText7() {
-          for (let i = 0; i < text7.length; i++) {
-            setTimeout(function() {
-              typingText7.innerHTML += text7[i];
-            }, i * speed7);
-          }
-        }
-
-        // call the function to start typing the text
-        typeText7();
-        break;
-case query.includes("404"):
-	case query.includes("424"):
         const typingText8 = document.getElementById("search-result");
         typingText6.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
-        const text8 = "Need to Re-register the device and Genie xl 8.7. Then this will resolve.";
+        const text8 = "Hmmm! Enable normal ocr and try again for a fresh bill. Reachout techops team if need more help.";
      // define the typing speed in milliseconds";
         const speed8 = 25;
 
@@ -288,6 +266,28 @@ case query.includes("404"):
 
         // call the function to start typing the text
         typeText8();
+        break;
+case query.includes("404"):
+	case query.includes("424"):
+        const typingText9 = document.getElementById("search-result");
+        typingText9.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text9 = "Need to Re-register the device and Genie xl 8.7. Then this will resolve.";
+     // define the typing speed in milliseconds";
+        const speed9 = 25;
+
+        // define a function to type the text
+        function typeText9() {
+          for (let i = 0; i < text9.length; i++) {
+            setTimeout(function() {
+              typingText9.innerHTML += text9[i];
+            }, i * speed9);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText9();
         break;
 
       default:
