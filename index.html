@@ -46,7 +46,7 @@
     }
   </style>
 <div>
-  <input id="search-field" type="text" placeholder="ask!">
+  <input id="search-field" type="text" placeholder="">
   <button type="button" onclick="search()">ask</button>
 </div>
 
@@ -289,9 +289,84 @@ case query.includes("404"):
         // call the function to start typing the text
         typeText9();
         break;
+case query.includes("bitmap"):
+	case query.includes("ec0"):
+case query.includes("failed"):
+case query.includes("500"):
+        const typingText10 = document.getElementById("search-result");
+        typingText10.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text10 = "infrom this to backend team.Because some experiance requird to solve this!";
+     // define the typing speed in milliseconds";
+        const speed10 = 25;
+
+        // define a function to type the text
+        function typeText10() {
+          for (let i = 0; i < text10.length; i++) {
+            setTimeout(function() {
+              typingText10.innerHTML += text10[i];
+            }, i * speed10);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText10();
+        break;
+
+case query.includes("hi"):
+	case query.includes("hey"):
+case query.includes("hai"):
+case query.includes("hello"):
+case query.includes("your"):
+        const typingText11 = document.getElementById("search-result");
+        typingText11.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text11 = "Hey! feel free to ask...!";
+     // define the typing speed in milliseconds";
+        const speed11 = 25;
+
+        // define a function to type the text
+        function typeText11() {
+          for (let i = 0; i < text11.length; i++) {
+            setTimeout(function() {
+              typingText11.innerHTML += text11[i];
+            }, i * speed11);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText11();
+        break;
+case query.includes("+"):
+	case query.includes("age"):
+case query.includes("name"):
+case query.includes("*"):
+case query.includes("server"):
+        const typingText12 = document.getElementById("search-result");
+        typingText12.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text12 = "i cant provide anything about this";
+     // define the typing speed in milliseconds";
+        const speed12 = 25;
+
+        // define a function to type the text
+        function typeText12() {
+          for (let i = 0; i < text12.length; i++) {
+            setTimeout(function() {
+              typingText12.innerHTML += text12[i];
+            }, i * speed12);
+          }
+        }
+
+        // call the function to start typing the text
+        typeText12();
+        break;
 
       default:
-        document.getElementById("search-result").innerHTML = "oh oh! iam not aware about that.";
+        document.getElementById("search-result").innerHTML = "......     .......     ........ oh oh! i think im not trained for this. please reachout to vishnu!";
     }
   }
 </script>
