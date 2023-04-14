@@ -44,6 +44,9 @@
       margin-top: 20px;
       font-size: 16px;
     }
+    {
+  text-align: left;
+}
   </style>
 <div>
   <input id="search-field" type="text" placeholder="ask here!">
@@ -53,39 +56,35 @@
 <div id="search-result"></div></center>
 
 <script>
-  function search() {
-    var query = document.getElementById("search-field").value.toLowerCase();
-    switch (true) {
-      case query.includes("genie xl offline"):
-      case query.includes("genie offline"):
-      case query.includes("offline"):
-	case query.includes("The genie"):
-case query.includes("The device"):
-case query.includes("device offline"):
-case query.includes("genie xl online"):
-case query.includes("genie xl"):
-        const typingText = document.getElementById("search-result");
-        typingText.innerHTML = '<p id="typing-text" style="color: blue;"></p>';
+function search() {
+  var query = document.getElementById("search-field").value.toLowerCase();
+  switch (true) {
+    case query.includes("genie xl offline"):
+    case query.includes("genie offline"):
+    case query.includes("offline"):
+    case query.includes("the genie"):
+    case query.includes("the device"):
+    case query.includes("device offline"):
+    case query.includes("genie xl online"):
+    case query.includes("genie box"):
+      const typingText = document.getElementById("search-result");
+      typingText.innerHTML = '<p id="typing-text"></p>';
+     const text = "Is your Genie xl offline?         ** Then we have to check these steps one by one.      *1. Check services running on Task manager? do needfull if not running.    **2. Make sure Internet is connected to the system. *Open any browser and try rdskytech.com page is loading or not. Do need full if there is internet related issue.      **3. Check date and time is proper.   Some times that also will be the reason of Genie XL offline.     **4. Check the genie XL log and observer if there any kind of error words are there.  Share the exact word with me if you found an error in the log.     **(examples: unable to read certificates.py, server error 500. unable to connect with server..etc). Then i can say what you have to do.  **Share the Genie XL log in the backend group and tag @techops if you are unable to find the exact issue"
 
-        // define the text to be typed
-       const text = "Oh is Genie xl offline? Then we have to check these steps one by one.  First check services running on Task manager? do needfull if not running.  Then make sure Internet is connected to the system.  Open any browser and try rdskytech.com page is loading or not.  Do need full if there is internet related issue.  Need to Check date and time is proper.  Some times that also will be there reason of Genie XL offline.  Last troubleshooting steps is Checking the genie XL log and observer any kind of error words are there.  Share the exact word with me if you found an error in the log. Then i can say what you have to do.Do this step at the end stage, Share the Genie XL log in the backend group and tag @techops if you are unable to find the exact issue";
-
- // define the typing speed in milliseconds
-        const speed = 25;
-
-        // define a function to type the text
-        function typeText() {
-          for (let i = 0; i < text.length; i++) {
-            setTimeout(function() {
-              typingText.innerHTML += text[i];
-            }, i * speed);
-          }
+      const speed = 40;
+function typeText() {
+  for (let i = 0; i < text.length; i++) {
+    setTimeout(function() {
+      if (text[i] === '*') {
+        typingText.innerHTML += '<br>';
+      } else {
+        typingText.innerHTML += text[i];
+      }
+    }, i * speed);
         }
-
-        // call the function to start typing the text
-        typeText();
-        break;
-      case query.includes("p is not green"):
+      }
+      typeText();
+      break;case query.includes("p is not green"):
 	case query.includes("p red issue"):
 		case query.includes("p is red"):
 			case query.includes("p is not green"):
@@ -95,25 +94,24 @@ case query.includes("genie xl"):
         typingText2.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
-        const text2 = "Okay! If P not in green then check these steps one by one. Check the Genie XL is online? make it online if offline. Also Make sure Promo enabled-and promo limit is not zero.Jarvis data is in sync?. Use sync data option from the jarvis if require.Then Restart the services once again.Else Share the Widget log in the backend group and tag @techops if you are unable to find the exact issue";
+        const text2 = "Okay! If P not in green then check these steps one by one.       **1.Check the Genie XL is online? make it online if offline.    **2.Make sure Promo enabled-and promo limit is not zero.     **3.Jarvis data is in sync?. Use sync data option from the jarvis if require.    **4. Restart the services once again.    **Share the Widget log in the backend group and tag @techops if you are unable to find the exact issue";
 
-        // define the typing speed in milliseconds
-        const speed2 = 25;
 
-        // define a function to type the text
-        function typeText2() {
-          for (let i = 0; i < text2.length; i++) {
-            setTimeout(function() {
-              typingText2.innerHTML += text2[i];
-            }, i * speed2);
-          }
+      const speed2 = 40;
+function typeText2() {
+  for (let i = 0; i < text2.length; i++) {
+    setTimeout(function() {
+      if (text2[i] === '*') {
+        typingText2.innerHTML += '<br>';
+      } else {
+        typingText2.innerHTML += text2[i];
+      }
+    }, i * speed2);
         }
-
-        // call the function to start typing the text
-        typeText2();
-        break;
-
-      case query.includes("data not uploading"):
+      }
+      typeText2();
+      break;
+ case query.includes("data not uploading"):
 	case query.includes("data uploading issue"):
 		case query.includes("data upload"):
 			case query.includes("bill not uploading"):
@@ -124,23 +122,23 @@ case query.includes("genie xl"):
         typingText3.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
-        const text3 = "you mean the number of counts are not updating in the jarvis health?. Then check the following steps. Make sure the bill is printing via CutePDF. Genie XL device should be in online then only data will upload. check genie xl log if both steps are working properly. ask me the error word u found from genie xl log, then i can provide the solution. else seek backend team help.";
-        // define the typing speed in milliseconds
-        const speed3 = 25;
-
-        // define a function to type the text
-        function typeText3() {
-          for (let i = 0; i < text3.length; i++) {
-            setTimeout(function() {
-              typingText3.innerHTML += text3[i];
-            }, i * speed3);
-          }
+        const text3 = "Oho...! You mean the number of counts are not updating in the jarvis health?      **Then check the following steps.    **1.Make sure the bill is printing via CutePDF.     **2.Genie XL device should be in online then only data will upload.    **3.Check genie xl log for the errors.   **4.if both steps are working properly then ask me the error word you found from genie xl log.   **(examples: unable to parse the bill, skipping bills, < 50, duplicate bill skipping.)   **Seek backend team help if you are unable to solve.";
+ const speed3 = 80;
+function typeText3() {
+  for (let i = 0; i < text3.length; i++) {
+    setTimeout(function() {
+      if (text3[i] === '*') {
+        typingText3.innerHTML += '<br>';
+      } else {
+        typingText3.innerHTML += text3[i];
+      }
+    }, i * speed3);
         }
-
-        // call the function to start typing the text
-        typeText3();
-        break;
-case query.includes("promo not working"):
+      }
+      typeText3();       
+        
+      break;
+      case query.includes("promo not working"):
 	case query.includes("promo is not working"):
 		case query.includes("promo coupon not"):
 			case query.includes("promo"):
@@ -149,24 +147,23 @@ case query.includes("promo not working"):
         typingText4.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
-        const text4 = "oops! im not clear about your question! anyway you suppose to check these steps. is your Genie online and uploading data to the jarvis? check the parsing status if yes. cross check the promo item barcode and make sure the product have minimum promo limit on widget reports. Check the logs and note errors and share with techops team. they will provide solution.";
+        const text4 = "I'm Sorry! I didn't get your actual query!     **Try to ask with specifc sentences's like     ** Why Coupon not printed, why QR coupon not printed, Why widget not open...etc.       **This will be more helpfull for you! ";
       // define the typing speed in milliseconds";
-        const speed4 = 25;
-
-        // define a function to type the text
-        function typeText4() {
-          for (let i = 0; i < text4.length; i++) {
-            setTimeout(function() {
-              typingText4.innerHTML += text4[i];
-            }, i * speed4);
-          }
+        const speed4 = 80;
+function typeText4() {
+  for (let i = 0; i < text4.length; i++) {
+    setTimeout(function() {
+      if (text4[i] === '*') {
+        typingText4.innerHTML += '<br>';
+      } else {
+        typingText4.innerHTML += text4[i];
+      }
+    }, i * speed4);
         }
-
-        // call the function to start typing the text
-        typeText4();
-        break;
-
-
+      }
+      typeText4();       
+        
+      break;
 case query.includes("qr"):
 	case query.includes("qr not"):
 		case query.includes("rq code"):
@@ -176,23 +173,23 @@ case query.includes("qr"):
         typingText5.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
-        const text5 = "Okay! We should check the data is uploading to the jarvis and its parsing properly. Tranasaction Completed message is flashing means the bill is parsing. So the QR will generate on the system if mentioned steps are working properly. Need to check the logs to figer out the reason for QR code printing. Ask me the error code you found in the log then i can help you. else take help from techops team!";
+        const text5 = "Okay! You should follow these steps for this!   **1.Scan and print a bill with atleast one promo item.*Cross check the Promo item barcode with Field ops app and make sure the product have sufficent promo limit *(You can check the limit in the store widget report.)   **2.Make sure the bill is uploading to the jarvis and its parsing properly.    * (Tranasaction Completed message is flashing means the bill is parsing.Contact the Data ops team for the Template update if the bills are not parsing.)  ** QR CODE COUPON SHOULD GENERATE IN THE SYSTEM IF THE ABOVE STEPS ARE FOLLOWING PROPERLY !!!     **3. Need to check the widget logs to figer out the reason for QR code not printing. Feel free to ask me the error code you found in the log.   **(examples: unable to locate gs path, error printing qr file, promo item 0";
       // define the typing speed in milliseconds";
-        const speed5 = 25;
-
-        // define a function to type the text
-        function typeText5() {
-          for (let i = 0; i < text5.length; i++) {
-            setTimeout(function() {
-              typingText5.innerHTML += text5[i];
-            }, i * speed5);
-          }
+      
+      const speed5 = 80;
+function typeText5() {
+  for (let i = 0; i < text5.length; i++) {
+    setTimeout(function() {
+      if (text5[i] === '*') {
+        typingText5.innerHTML += '<br>';
+      } else {
+        typingText5.innerHTML += text5[i];
+      }
+    }, i * speed5);
         }
-
-        // call the function to start typing the text
-        typeText5();
-        break;
-
+      }
+      typeText5(); 
+break;
 case query.includes("techops"):
 	case query.includes("backend"):
 		case query.includes("back end"):
@@ -202,23 +199,23 @@ case query.includes("who"):
         const typingText6 = document.getElementById("search-result");
         typingText6.innerHTML = '<p id="typing-text"></p>';
 
-        // define the text to be typed
-        const text6 = " Our backend team members are Vishnu saji, Ranjeet mandal, Prakash Devaiah ,Yogen Solanki, Mohammad Sadan and Mirza Rahman. You can reach out to them for ny kind of technical issues. You should post your issues in backend group and tag @techops. can expect solution as soon as possible!";
+        const text6 = "Our backend team members are    **Vishnu saji   *Ranjeet mandal   *Prakash Devaiah    *Yogen Solanki     *Mohammad Sadan  *Mirza Rahman.    **You can reach out to them for ny kind of technical issues. You should post your issues in backend group and tag @techops."
       // define the typing speed in milliseconds";
-        const speed6 = 25;
-
-        // define a function to type the text
-        function typeText6() {
-          for (let i = 0; i < text6.length; i++) {
-            setTimeout(function() {
-              typingText6.innerHTML += text6[i];
-            }, i * speed6);
-          }
+const speed6 = 80;
+function typeText6() {
+  for (let i = 0; i < text6.length; i++) {
+    setTimeout(function() {
+      if (text6[i] === '*') {
+        typingText6.innerHTML += '<br>';
+      } else {
+        typingText6.innerHTML += text6[i];
+      }
+    }, i * speed6);
         }
+      }
+      typeText6(); 
+break;
 
-        // call the function to start typing the text
-        typeText6();
-        break;
 case query.includes("upgrade box"):
 	case query.includes("upgrade genie"):
 		case query.includes("widget upgrade"):
@@ -227,146 +224,24 @@ case query.includes("upgrade box"):
         typingText7.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
-        const text7 = "Oh sorry! i canot say this to you. Because you cant do it until unless a backend access. Contact @techops for such cases.";
+        const text7 = "Oh sorry! i canot say this to you. Because you cant do it until unless get backend access. *Contact @techops for such cases.";
      // define the typing speed in milliseconds";
-        const speed7 = 25;
-
-        // define a function to type the text
+        const speed7 = 80;
         function typeText7() {
-          for (let i = 0; i < text7.length; i++) {
-            setTimeout(function() {
-              typingText7.innerHTML += text7[i];
-            }, i * speed7);
-          }
+  for (let i = 0; i < text7.length; i++) {
+    setTimeout(function() {
+      if (text7[i] === '*') {
+        typingText7.innerHTML += '<br>';
+      } else {
+        typingText7.innerHTML += text7[i];
+      }
+    }, i * speed7);
         }
-
-        // call the function to start typing the text
-        typeText7();
-        break;
-case query.includes("bill skiping"):
-	case query.includes("skip"):
-		case query.includes("50<"):
-			case query.includes("50"):
-        const typingText8 = document.getElementById("search-result");
-        typingText6.innerHTML = '<p id="typing-text"></p>';
-
-        // define the text to be typed
-        const text8 = "Hmmm! Enable normal ocr and try again for a fresh bill. Reachout techops team if need more help.";
-     // define the typing speed in milliseconds";
-        const speed8 = 25;
-
-        // define a function to type the text
-        function typeText8() {
-          for (let i = 0; i < text8.length; i++) {
-            setTimeout(function() {
-              typingText8.innerHTML += text8[i];
-            }, i * speed8);
-          }
-        }
-
-        // call the function to start typing the text
-        typeText8();
-        break;
-case query.includes("404"):
-	case query.includes("424"):
-        const typingText9 = document.getElementById("search-result");
-        typingText9.innerHTML = '<p id="typing-text"></p>';
-
-        // define the text to be typed
-        const text9 = "Need to Re-register the device and Genie xl 8.7. Then this will resolve.";
-     // define the typing speed in milliseconds";
-        const speed9 = 25;
-
-        // define a function to type the text
-        function typeText9() {
-          for (let i = 0; i < text9.length; i++) {
-            setTimeout(function() {
-              typingText9.innerHTML += text9[i];
-            }, i * speed9);
-          }
-        }
-
-        // call the function to start typing the text
-        typeText9();
-        break;
-case query.includes("bitmap"):
-	case query.includes("ec0"):
-case query.includes("failed"):
-case query.includes("500"):
-        const typingText10 = document.getElementById("search-result");
-        typingText10.innerHTML = '<p id="typing-text"></p>';
-
-        // define the text to be typed
-        const text10 = "infrom this to backend team.Because some experiance requird to solve this!";
-     // define the typing speed in milliseconds";
-        const speed10 = 25;
-
-        // define a function to type the text
-        function typeText10() {
-          for (let i = 0; i < text10.length; i++) {
-            setTimeout(function() {
-              typingText10.innerHTML += text10[i];
-            }, i * speed10);
-          }
-        }
-
-        // call the function to start typing the text
-        typeText10();
-        break;
-
-case query.includes("hi"):
-	case query.includes("hey"):
-case query.includes("hai"):
-case query.includes("hello"):
-case query.includes("your"):
-        const typingText11 = document.getElementById("search-result");
-        typingText11.innerHTML = '<p id="typing-text"></p>';
-
-        // define the text to be typed
-        const text11 = "Hey! feel free to ask...!";
-     // define the typing speed in milliseconds";
-        const speed11 = 25;
-
-        // define a function to type the text
-        function typeText11() {
-          for (let i = 0; i < text11.length; i++) {
-            setTimeout(function() {
-              typingText11.innerHTML += text11[i];
-            }, i * speed11);
-          }
-        }
-
-        // call the function to start typing the text
-        typeText11();
-        break;
-case query.includes("+"):
-	case query.includes("age"):
-case query.includes("name"):
-case query.includes("*"):
-case query.includes("server"):
-        const typingText12 = document.getElementById("search-result");
-        typingText12.innerHTML = '<p id="typing-text"></p>';
-
-        // define the text to be typed
-        const text12 = "i cant provide anything about this";
-     // define the typing speed in milliseconds";
-        const speed12 = 25;
-
-        // define a function to type the text
-        function typeText12() {
-          for (let i = 0; i < text12.length; i++) {
-            setTimeout(function() {
-              typingText12.innerHTML += text12[i];
-            }, i * speed12);
-          }
-        }
-
-        // call the function to start typing the text
-        typeText12();
-        break;
-
-      default:
-        document.getElementById("search-result").innerHTML = "......     .......     ........ oh oh! i think im not trained for this. please reachout to vishnu!";
-    }
+      }
+      typeText7(); 
+break;
+    default:
+      document.getElementById("search-result").innerHTML = "......     .......     ........ ohoo! i think im not trained for this.";
   }
+}
 </script>
