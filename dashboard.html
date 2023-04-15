@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stores Table</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="search-input">Search:</label>
+      <input type="text" id="search-input" placeholder="Enter store name">
+      <button id="search-btn">Search</button>
+    </div>
+    <table id="stores-table">
+      <tr>
+        <th>Store ID</th>
+        <th>Store name</th>
+        <th>Active/Inactive</th>
+        <th>TSE</th>
+      </tr>
+    </table>
+    <script>
+      // Use the Google Sheets API to fetch the data
+      const spreadsheetId = '12Nex7zXb2BSLRDj6eRdF3pnYQ4RdkZcJeEfScCUYEdE';
+      const sheetName = 'Sheet1';
+      const apiKey = 'AIzaSyBwqJHlInJMawbvGVcgcJCfoGzdLJ9Rp-Y';
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const rows = data.values;
+          const table = document.getElementById('stores-table');
+          const searchBtn = document.getElementById('search-btn');
+          const searchInput = document.getElementById('search-input');
+          
+          // Add event listener to search button
+          searchBtn.addEventListener('click', () => {
+            const query = searchInput.value.trim().toLowerCase();
+            const filteredRows = rows.filter(row => row[1].toLowerCase().includes(query));
+            populateTable(filteredRows);
+          });
+          
+          // Populate table with all rows by default
+          populateTable(rows);
+          
+          function populateTable(rows) {
+            // Clear existing table rows
+            table.innerHTML = '';
+            
+            // Create table header row
+            const headerRow = document.createElement('tr');
+            const headerCells = ['Store ID', 'Store name', 'Active/Inactive', 'TSE'];
+            for (let i = 0; i < headerCells.length; i++) {
+              const cell = document.createElement('th');
+              cell.textContent = headerCells[i];
+              headerRow.appendChild(cell);
+            }
+            table.appendChild(headerRow);
+            
+            // Create table rows for each filtered row of data
+            for (let i = 1; i < rows.length; i++) {
+              const row = document.createElement('tr');
+              const storeId = document.createElement('td');
+              const storeName = document.createElement('td');
+              const status = document.createElement('td');
+              const TSE = document.createElement('td');
+
+              // Populate cells with data
+              storeId.textContent = rows[i][0]; // assuming store ID is in the first column
+              storeName.textContent = rows[i][1]; // assuming store name is in the second column
+              status.textContent = rows[i][2]; // assuming status is in the third column
+              TSE.textContent = rows[i][3]; // assuming TSE is in the fourth column
+
+              // Append cells to row
+              row.appendChild(storeId);
+              row.appendChild(storeName);
+              row.appendChild(status);
+              row.appendChild(TSE);
+
+              table.appendChild(row);
+            }
+          }
+        });
+    </script>
+  </body>
+</html>
