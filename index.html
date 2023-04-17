@@ -260,6 +260,30 @@ case query.includes("upgrade box"):
         }
       }
       typeText7(); 
+		  case query.includes("bill skip"):
+	case query.includes("50"):
+		case query.includes("<"):
+			case query.includes("unable to parse"):
+		  case query.includes("Promo bill not upload"):
+        const typingText8 = document.getElementById("search-result");
+        typingText8.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text8 = "Maybe OCR installation will solve this issue.So try to enable ocr once.        ** Else do these steps one one one           **1. End task the Genie XL and Ushop services.     *2.Delete the %temp% files    *3.Open %appdata% rdskytech\genie xl\lib\ delete last_bill.json and parsing.json.      *4.Start RS Genie XL and sync the data     *5.Start Ushop widget. Then scan and print a fresh bill.      **Do re-register the device and reinstall the Genie xl if you are unable to fix this!      **Contact Backend team if req!!!";
+     // define the typing speed in milliseconds";
+        const speed8 = 80;
+        function typeText7() {
+  for (let i = 0; i < text8.length; i++) {
+    setTimeout(function() {
+      if (text8[i] === '*') {
+        typingText8.innerHTML += '<br>';
+      } else {
+        typingText8.innerHTML += text8[i];
+      }
+    }, i * speed8);
+        }
+      }
+      typeText8(); 
 break;
     default:
       document.getElementById("search-result").innerHTML = "......     .......     ........ ohoo! i think im not trained for this.";
