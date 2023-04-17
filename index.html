@@ -326,6 +326,49 @@ case query.includes("failed to select"):
         }
       }
       typeText10(); 
+		  case query.includes("500"):
+case query.includes("502"):
+        const typingText11 = document.getElementById("search-result");
+        typingText11.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text11 = "500 error means,   the server is not working properly. So just post the log in the group and tag @techops.    *They will fix that from backend side.  // define the typing speed in milliseconds";
+        const speed11 = 80;
+        function typeText11() {
+  for (let i = 0; i < text11.length; i++) {
+    setTimeout(function() {
+      if (text11[i] === '*') {
+        typingText11.innerHTML += '<br>';
+      } else {
+        typingText11.innerHTML += text11[i];
+      }
+    }, i * speed11);
+        }
+      }
+      typeText11(); 
+break;
+case query.includes("QR installation"):
+case query.includes("QR setup"):
+case query.includes("QR configuration"):
+        const typingText10 = document.getElementById("search-result");
+        typingText12.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text12 = "Follow the setps for QR code installation and configuration!     **1.Activate testmade and select gs     **2.Copy the gsfile path. (C:\Program Files\gs\gs9.22\bin\gswin64.exe)    **3.paste the path to gs location in widget.    **4.paste the bin path in environment variables (C:\Program Files\gs\gs9.22\bin\)      **maybe you cant do this with only the instructions. Watch the video if req!";
+     // define the typing speed in milliseconds";
+        const speed12 = 80;
+        function typeText12() {
+  for (let i = 0; i < text12.length; i++) {
+    setTimeout(function() {
+      if (text12[i] === '*') {
+        typingText12.innerHTML += '<br>';
+      } else {
+        typingText12.innerHTML += text12[i];
+      }
+    }, i * speed12);
+        }
+      }
+      typeText12(); 
 break;
     default:
       document.getElementById("search-result").innerHTML = "......     .......     ........ ohoo! i think im not trained for this.";
