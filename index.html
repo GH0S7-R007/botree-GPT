@@ -373,6 +373,28 @@ case query.includes("QR configuration"):
       }
       typeText12(); 
 break;
+		  case query.includes("failed to connect"):
+
+        const typingText13 = document.getElementById("search-result");
+        typingText13.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text13 = "Re installation require here.     ** Download Register device and RS Genie xl and install it properly.   ** dont run genie installer for this case. Because CutePDF will be reinstall on this action, SO printer mapping will loss sometimes.";
+    // define the typing speed in milliseconds";
+        const speed13 = 80;
+        function typeText13() {
+  for (let i = 0; i < text13.length; i++) {
+    setTimeout(function() {
+      if (text13[i] === '*') {
+        typingText13.innerHTML += '<br>';
+      } else {
+        typingText13.innerHTML += text13[i];
+      }
+    }, i * speed13);
+        }
+      }
+      typeText13(); 
+break;
     default:
       document.getElementById("search-result").innerHTML = "......     .......     ........ ohoo! i think im not trained for this.";
   }
