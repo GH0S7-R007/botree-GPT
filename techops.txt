@@ -1,0 +1,14 @@
+TSE or Area Leads should post the help requiest in the backend team with tag of @techops. someone will pickup the request as per the availablity.
+aim of the backend team is supporting filed Teams(TSE). backend team can handle the basic installation and troubleshoot for upload the bill and scan data to jarvis dashboard. from there data ops team will handle template creation, promotion enabliling, appolo entries. once everything is done from the dataops team, the techops team will handle promtion coupon or QR code generation.
+these are the issues facing the TSE on gorund. the techops team is supporting for these issues mostly.
+1.Genie X/XL installation
+2.Device offline
+3.Printer mapping
+3.Data uploading
+4.Scan uploading
+5.Transaction compoleted
+5.Coupon/QR printing
+6.Cash counter not opening
+7.system hang issue
+8.Print not getting from CutePDF
+9.Data uploading but not printing
