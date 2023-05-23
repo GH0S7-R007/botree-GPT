@@ -1,8 +1,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<a href="https://gh0s7-r007.github.io/botree-GPT/dashboard.html">
-  <button>Dashboard</button>
+<a href="https://gh0s7-r007.github.io/botree-GPT">
+  <button>reset</button>
 </a>
 <center>
 	<img src="https://gh0s7-r007.github.io/botree-GPT/png.png" width="70mm" height="90mm" alt="Bot Avatar">
@@ -169,7 +169,7 @@ function typeText3() {
         typingText4.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
-        const text4 = "I'm Sorry! I didn't get your actual query!     **Try to ask with specifc sentences's like     ** Why Coupon not printed, why QR coupon not printed, Why widget not open...etc.       **This will be more helpfull for you! ";
+        const text4 = "Ask the question clearly!     **Try to ask with specifc sentences's like     ** Why Coupon not printed, why QR coupon not printed, Why widget not open...etc.       **This will be more helpfull for you! ";
       // define the typing speed in milliseconds";
         const speed4 = 80;
 function typeText4() {
@@ -188,9 +188,12 @@ function typeText4() {
       break;
 case query.includes("qr"):
 	case query.includes("qr not"):
-		case query.includes("rq code"):
+		case query.includes("qr code"):
 			case query.includes("qr promo"):
 	case query.includes("qr coupon"):
+case query.includes("coupon"):
+case query.includes("widget not"):
+case query.includes("not open"):
         const typingText5 = document.getElementById("search-result");
         typingText5.innerHTML = '<p id="typing-text"></p>';
 
@@ -217,7 +220,6 @@ case query.includes("techops"):
 		case query.includes("back end"):
 			case query.includes("backend team"):
 	case query.includes("team"):
-case query.includes("who"):
         const typingText6 = document.getElementById("search-result");
         typingText6.innerHTML = '<p id="typing-text"></p>';
 
@@ -267,6 +269,7 @@ break;
 		case query.includes("skip"):
 			case query.includes("unable to parse"):
 		  case query.includes("Promo bill not upload"):
+case query.includes("skipping"):
         const typingText8 = document.getElementById("search-result");
         typingText8.innerHTML = '<p id="typing-text"></p>';
 
@@ -397,8 +400,113 @@ break;
       }
       typeText13(); 
 break;
-    default:
-      document.getElementById("search-result").innerHTML = "......     .......     ........ ohoo! i think im not trained for this.";
+
+ case query.includes("device already"):
+case query.includes("already"):
+case query.includes("register already"):
+
+        const typingText14 = document.getElementById("search-result");
+        typingText14.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text14 = "1.If installed XL then stop services from task manager**Then open RUN->%appdata%->RdSkyTech->GenieXL->cert->delete pos.crt & pos.key** Now try to register again and install Geniexl*** 2.contact backend team if you are unable to solve.";
+    // define the typing speed in milliseconds";
+        const speed14 = 80;
+        function typeText14() {
+  for (let i = 0; i < text14.length; i++) {
+    setTimeout(function() {
+      if (text14[i] === '*') {
+        typingText14.innerHTML += '<br>';
+      } else {
+        typingText14.innerHTML += text14[i];
+      }
+    }, i * speed14);
+        }
+      }
+      typeText14(); 
+break;
+
+ case query.includes("blank bill"):
+case query.includes("empty"):
+case query.includes("blank"):
+
+        const typingText15 = document.getElementById("search-result");
+        typingText15.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text15 = "Use paper page size as 80X297 in CutePDF Writer.This will solve blank bill uploading issue.** Try original drivers if unable solve with page size.**";
+    // define the typing speed in milliseconds";
+        const speed15 = 80;
+        function typeText15() {
+  for (let i = 0; i < text15.length; i++) {
+    setTimeout(function() {
+      if (text15[i] === '*') {
+        typingText15.innerHTML += '<br>';
+      } else {
+        typingText15.innerHTML += text15[i];
+      }
+    }, i * speed15);
+        }
+      }
+      typeText15(); 
+break;
+
+
+ case query.includes("side"):
+case query.includes("cutting"):
+case query.includes("cut"):
+case query.includes("bill cut"):
+case query.includes("offset"):
+        const typingText16 = document.getElementById("search-result");
+        typingText16.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text16 = "1.Open regedit--> Hkey current_user software/rdskytech/genie**use offset in mm in (- sign or + sign)  accordingly bill shifting size.**move to left -0.1 0.0 to -0.9 0.0**move to right 0.1 0.0 to 0.9 0.0**move to top -0.1 0.0 to -0.9 0.0** move to bottom 0.1 0.0 to 0.9 0.0*(Now adjust as required in inch)";
+    // define the typing speed in milliseconds"; 
+        const speed16 = 80;
+        function typeText16() {
+  for (let i = 0; i < text16.length; i++) {
+    setTimeout(function() {
+      if (text16[i] === '*') {
+        typingText16.innerHTML += '<br>';
+      } else {
+        typingText16.innerHTML += text16[i];
+      }
+    }, i * speed16);
+        }
+      }
+      typeText16(); 
+break;
+
+
+
+ case query.includes("testmode not"):
+case query.includes("test mode not"):
+case query.includes("test mode"):
+case query.includes("testmode"):
+
+        const typingText17 = document.getElementById("search-result");
+        typingText17.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text17 = "1.Testmode is not getting activated?**open jarvis-->troubleshoot-->activate testmode*check device offline issue if jarvis says unable to do testmode.** 2.Testmode activated from jarvis but not reflecting on widget?**check the registry value in regedit.exe by Run>regedit> HKEY_CURRENT_USER\Software\RdSkyTech. ->Genie-> FOR GENIE XL (gxl://) FOR GENIE X (Generic/Text only)";
+    // define the typing speed in milliseconds"; 
+        const speed17 = 80;
+        function typeText17() {
+  for (let i = 0; i < text17.length; i++) {
+    setTimeout(function() {
+      if (text17[i] === '*') {
+        typingText17.innerHTML += '<br>';
+      } else {
+        typingText17.innerHTML += text17[i];
+      }
+    }, i * speed17);
+        }
+      }
+      typeText17(); 
+break;
+default:
+      document.getElementById("search-result").innerHTML = "This question is not from the trained database i think. ask related tech ops.";
   }
 }
 </script>
