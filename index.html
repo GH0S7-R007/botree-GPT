@@ -1,20 +1,30 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<a href="https://gh0s7-r007.github.io/botree-GPT">
-  <button>reset</button>
-</a>
 <center>
 	<img src="https://gh0s7-r007.github.io/botree-GPT/png.png" width="70mm" height="90mm" alt="Bot Avatar">
-<h1 style="font-size: 30px; color: white;"> Hi, I'm Tessa!</h1>
-<p style="font-size: 25px; color: #66ff99;">Feel free to ask anything related to Tech Ops</p>
-
- <style>
  
+  <style>
   body {
-      background-color: black;
-      color: white; /* optionally, set text color to white to contrast with the black background */
-    }
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+  }
+
+  h1 {
+    font-size: 40px;
+    color: #66ff99;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 30px;
+    color: #66ff99;
+    margin-bottom: 40px;
+  }
+
  
  a button {
   background-color: blue;
@@ -70,9 +80,16 @@
   text-align: left;
 }</center>
   </style>
+<body>
+  <h1>Hi, I'm Tessa!</h1>
+  <p>Feel free to ask anything related to Tech Ops</p>
+</body>
 <div>
   <input id="search-field" type="text" placeholder="ask here!">
   <button type="button" onclick="search()">ask</button>
+<a href="https://gh0s7-r007.github.io/botree-GPT">
+  <button>reset</button>
+</a>
 </div>
 
 <div id="search-result"></div></center>
@@ -89,9 +106,15 @@ function search() {
     case query.includes("device offline"):
     case query.includes("genie xl online"):
     case query.includes("genie box"):
+case query.includes("genie xl is offline"):
+case query.includes("device is offline"):
+case query.includes("device not online"):
+case query.includes("device is not in online"):
+case query.includes("device not online"):
+
       const typingText = document.getElementById("search-result");
       typingText.innerHTML = '<p id="typing-text"></p>';
-     const text = "Is your Genie xl offline?         ** Then we have to check these steps one by one.      *1. Check services running on Task manager? do needfull if not running.    **2. Make sure Internet is connected to the system. *Open any browser and try rdskytech.com page is loading or not. Do need full if there is internet related issue.      **3. Check date and time is proper.   Some times that also will be the reason of Genie XL offline.     **4. Check the genie XL log and observer if there any kind of error words are there.  Share the exact word with me if you found an error in the log.     **(examples: unable to read certificates.py, server error 500. unable to connect with server..etc). Then i can say what you have to do.  **Share the Genie XL log in the backend group and tag @techops if you are unable to find the exact issue"
+     const text = "Okay! Check these steps one by one.      **1. Check services running on Task manager? do needfull if not running.    **2. Make sure Internet is connected to the system. *Open any browser and try rdskytech.com page is loading or not. Do need full if there is internet related issue.      **3. Check date and time is proper.   Some times that also will be the reason of Genie XL offline.     **4. Check the genie XL log and observer if there any kind of error words are there.  Share the exact word with me if you found an error in the log.     **(examples: unable to read certificates.py, server error 500. unable to connect with server..etc). Then i can say what you have to do.  **Share the Genie XL log in the backend group and tag @techops if you are unable to find the exact issue"
 
       const speed = 40;
 function typeText() {
@@ -107,6 +130,7 @@ function typeText() {
       }
       typeText();
       break;case query.includes("p is not green"):
+case query.includes("promo indicator is not"):
 	case query.includes("p red issue"):
 		case query.includes("p is red"):
 			case query.includes("p is not green"):
@@ -505,8 +529,70 @@ case query.includes("testmode"):
       }
       typeText17(); 
 break;
+
+
+ case query.includes("ur name"):
+case query.includes("your name"):
+case query.includes("or bot"):
+case query.includes("human or bot"):
+case query.includes("a human"):
+case query.includes("human or bot"):
+case query.includes("you"):
+
+        const typingText18 = document.getElementById("search-result");
+        typingText18.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text18 = "Im Tessa! Im a bot. *Here to support TSE's on Ground.";
+    // define the typing speed in milliseconds"; 
+        const speed18 = 80;
+        function typeText18() {
+  for (let i = 0; i < text18.length; i++) {
+    setTimeout(function() {
+      if (text18[i] === '*') {
+        typingText18.innerHTML += '<br>';
+      } else {
+        typingText18.innerHTML += text18[i];
+      }
+    }, i * speed18);
+        }
+      }
+      typeText18(); 
+break;
+
+
+
+ case query.includes("what is genie xl"):
+case query.includes("what does"):
+case query.includes("or bot"):
+case query.includes("human or bot"):
+case query.includes("a human"):
+case query.includes("human or bot"):
+case query.includes("you"):
+
+        const typingText18 = document.getElementById("search-result");
+        typingText18.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text18 = "Im Tessa! Im a bot. *Here to support TSE's on Ground.";
+    // define the typing speed in milliseconds"; 
+        const speed18 = 80;
+        function typeText18() {
+  for (let i = 0; i < text18.length; i++) {
+    setTimeout(function() {
+      if (text18[i] === '*') {
+        typingText18.innerHTML += '<br>';
+      } else {
+        typingText18.innerHTML += text18[i];
+      }
+    }, i * speed18);
+        }
+      }
+      typeText18(); 
+break;
+
 default:
-      document.getElementById("search-result").innerHTML = "This question is not from the trained database i think. ask related tech ops.";
+      document.getElementById("search-result").innerHTML = "I apologize, but I'm unable to provide an answer for this. It seems to be beyond my current training. <br>I recommended asking for any relevant details from Techops using the appropriate short keys like. <br>Genie XL offline, device offline, QR issue, data uploading issue...etc";
   }
 }
 </script>
