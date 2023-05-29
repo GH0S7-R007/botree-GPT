@@ -562,33 +562,28 @@ break;
 
 
 
- case query.includes("what is genie xl"):
-case query.includes("what does"):
-case query.includes("or bot"):
-case query.includes("human or bot"):
-case query.includes("a human"):
-case query.includes("human or bot"):
-case query.includes("you"):
+ case query.includes("developed"):
 
-        const typingText18 = document.getElementById("search-result");
-        typingText18.innerHTML = '<p id="typing-text"></p>';
+
+        const typingText19 = document.getElementById("search-result");
+        typingText19.innerHTML = '<p id="typing-text"></p>';
 
         // define the text to be typed
-        const text18 = "Im Tessa! Im a bot. *Here to support TSE's on Ground.";
+        const text19 = "vishnu saji developed me!";
     // define the typing speed in milliseconds"; 
-        const speed18 = 80;
-        function typeText18() {
+        const speed19 = 80;
+        function typeText19() {
   for (let i = 0; i < text18.length; i++) {
     setTimeout(function() {
-      if (text18[i] === '*') {
-        typingText18.innerHTML += '<br>';
+      if (text19[i] === '*') {
+        typingText19.innerHTML += '<br>';
       } else {
-        typingText18.innerHTML += text18[i];
+        typingText19.innerHTML += text19[i];
       }
-    }, i * speed18);
+    }, i * speed19);
         }
       }
-      typeText18(); 
+      typeText19(); 
 break;
 
 default:
