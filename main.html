@@ -1,22 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Centered Text with Gradient Background</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background: linear-gradient(to right, red, blue);
-        }
-        
-        h1 {
-            color: white;
-        }
-    </style>
+  <title>Modern Login Form</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #00bfff, #87ceeb);
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      animation: rotate 5s linear infinite;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .container .submit-btn {
+      display: none;
+    }
+
+    
+    }
+  </style>
 </head>
 <body>
-    <h1>Access this from Jarvis Chat</h1>
+  <div class="container">
+    <h2>Door is locked!</h2>
+    <form id="loginForm" onsubmit="return login()">
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="submit" id="submitBtn" class="submit-btn" value="Login">
+    </form>
+  </div>
+
+  <script>
+    function login() {
+      var password = document.getElementById("password").value;
+      var submitBtn = document.getElementById("submitBtn");
+
+      if (password === "tessa") {
+        // Login successful
+        alert("Login successful!");
+        submitBtn.style.display = "block"; // Make the submit button visible
+        window.location.href = "https://gh0s7-r007.github.io/botree-GPT/"; // Redirect to the specified URL
+      } else {
+        // Incorrect password
+        alert("Incorrect password. Please try again.");
+      }
+
+      return false; // Prevent form submission
+    }
+  </script>
 </body>
 </html>
