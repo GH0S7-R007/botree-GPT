@@ -1,87 +1,665 @@
-<!DOCTYPE html>
-<html>
 <head>
-  <title>Login Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<center>
+	<img src="https://gh0s7-r007.github.io/botree-GPT/png.png" width="50mm" height="70mm" alt="Bot Avatar">
+ 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: white;
-      margin: 0;
-      padding: 0;
-    }
+  body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+  }
 
-    .container {
-      display: flex;
-      flex-direction: column;
+  h1 {
+    font-size: 20px;
+    color: #66ff99;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    color: #66ff99;
+    margin-bottom: 40px;
+  }
+
+ 
+ a button {
+  background-color: blue;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+
+    @media (max-width: 768px) {
+  /* styles for screens smaller than 768px */
+}
+    /* Add some basic styling to the search field */
+    form {
+      display: block;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      margin-top: 50px;
     }
-
-    .icon {
-      width: 200px;
-      height: 200px;
-      background-image: url("https://www.garruda.co.in/wp-content/uploads/2019/05/4-2.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      margin-bottom: 20px;
-    }
-
-    .form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .form input[type="password"] {
-      width: 200px;
+    input[type=text] {
       padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      width: 300px;
       font-size: 16px;
-    }
-
-    .form input[type="submit"] {
-      width: 200px;
-      padding: 10px;
-      background-color: #ffffff;
-      color: #333333;
       border: none;
       border-radius: 5px;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+      margin-right: 10px;
+    }
+    button[type=button] {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
       font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
       cursor: pointer;
     }
-
-    .form input[type="submit"]:hover {
-      background-color: skyblue;
+    button[type=button]:hover {
+      background-color: #0062cc;
     }
+    /* Add some basic styling to the search result */
+    #search-result {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    {
+  text-align: left;
+}</center>
   </style>
-</head>
 <body>
-  <div class="container">
-    <div class="icon"></div>
-    <form id="loginForm" onsubmit="return login()" class="form">
-      <input type="password" id="password" placeholder="Enter Key to open the door" required>
-      <input type="submit" value="Open Door">
-    </form>
-  </div>
-
-  <script>
-    function login() {
-      var password = document.getElementById("password").value;
-
-      if (password === "tessa") {
-        // Login successful
-        window.location.href = "https://gh0s7-r007.github.io/botree-GPT/"; // Redirect to the specified URL
-      } else {
-        // Incorrect password
-        alert("Incorrect key...");
-      }
-
-      return false; // Prevent form submission
-    }
-  </script>
+  <h1>Hi, I'm Tessa!</h1>
+  <p>Feel free to ask anything related to Tech Ops</p>
 </body>
-</html>
+<div>
+  <input id="search-field" type="text" placeholder="ask here!">
+  <button type="button" onclick="search()">ask</button>
+<a href="https://gh0s7-r007.github.io/botree-GPT">
+  <button>reset</button>
+</a>
+</div>
+
+<div id="search-result"></div></center>
+
+<script>
+function search() {
+  var query = document.getElementById("search-field").value.toLowerCase();
+  switch (true) {
+    case query.includes("genie xl offline"):
+    case query.includes("genie offline"):
+    case query.includes("offline"):
+    case query.includes("the genie"):
+    case query.includes("the device"):
+    case query.includes("device offline"):
+    case query.includes("genie xl online"):
+    case query.includes("genie box"):
+case query.includes("genie xl is offline"):
+case query.includes("device is offline"):
+case query.includes("device not online"):
+case query.includes("device is not in online"):
+case query.includes("device not online"):
+
+      const typingText = document.getElementById("search-result");
+      typingText.innerHTML = '<p id="typing-text"></p>';
+     const text = "Okay! Check these steps one by one.      **1. Check services running on Task manager? do needfull if not running.    **2. Make sure Internet is connected to the system. *Open any browser and try rdskytech.com page is loading or not. Do need full if there is internet related issue.      **3. Check date and time is proper.   Some times that also will be the reason of Genie XL offline.     **4. Check the genie XL log and observer if there any kind of error words are there.  Share the exact word with me if you found an error in the log.     **(examples: unable to read certificates.py, server error 500. unable to connect with server..etc). Then i can say what you have to do.  **Share the Genie XL log in the backend group and tag @techops if you are unable to find the exact issue"
+
+      const speed = 40;
+function typeText() {
+  for (let i = 0; i < text.length; i++) {
+    setTimeout(function() {
+      if (text[i] === '*') {
+        typingText.innerHTML += '<br>';
+      } else {
+        typingText.innerHTML += text[i];
+      }
+    }, i * speed);
+        }
+      }
+      typeText();
+      break;case query.includes("p is not green"):
+case query.includes("promo indicator is not"):
+	case query.includes("p red issue"):
+		case query.includes("p is red"):
+			case query.includes("p is not green"):
+	case query.includes("p red"):
+	case query.includes("p is in not green"):
+        const typingText2 = document.getElementById("search-result");
+        typingText2.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text2 = "Okay! If P not in green then check these steps one by one.       **1.Check the Genie XL is online? make it online if offline.    **2.Make sure Promo enabled-and promo limit is not zero.     **3.Jarvis data is in sync?. Use sync data option from the jarvis if require.    **4. Restart the services once again.    **Share the Widget log in the backend group and tag @techops if you are unable to find the exact issue";
+
+
+      const speed2 = 40;
+function typeText2() {
+  for (let i = 0; i < text2.length; i++) {
+    setTimeout(function() {
+      if (text2[i] === '*') {
+        typingText2.innerHTML += '<br>';
+      } else {
+        typingText2.innerHTML += text2[i];
+      }
+    }, i * speed2);
+        }
+      }
+      typeText2();
+      break;
+ case query.includes("data not uploading"):
+	case query.includes("data uploading issue"):
+		case query.includes("data upload"):
+			case query.includes("bill not uploading"):
+	case query.includes("bill is not uploading"):
+	case query.includes("data not upload"):
+	case query.includes("data is not upload"):
+        const typingText3 = document.getElementById("search-result");
+        typingText3.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text3 = "Oho...! You mean the number of counts are not updating in the jarvis health?      **Then check the following steps.    **1.Make sure the bill is printing via CutePDF.     **2.Genie XL device should be in online then only data will upload.    **3.Check genie xl log for the errors.   **4.if both steps are working properly then ask me the error word you found from genie xl log.   **(examples: unable to parse the bill, skipping bills, < 50, duplicate bill skipping.)   **Seek backend team help if you are unable to solve.";
+ const speed3 = 80;
+function typeText3() {
+  for (let i = 0; i < text3.length; i++) {
+    setTimeout(function() {
+      if (text3[i] === '*') {
+        typingText3.innerHTML += '<br>';
+      } else {
+        typingText3.innerHTML += text3[i];
+      }
+    }, i * speed3);
+        }
+      }
+      typeText3();       
+        
+      break;
+      case query.includes("promo not working"):
+	case query.includes("promo is not working"):
+		case query.includes("promo coupon not"):
+			case query.includes("promo"):
+	case query.includes("promotion coupon"):
+        const typingText4 = document.getElementById("search-result");
+        typingText4.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text4 = "Ask the question clearly!     **Try to ask with specifc sentences's like     ** Why Coupon not printed, why QR coupon not printed, Why widget not open...etc.       **This will be more helpfull for you! ";
+      // define the typing speed in milliseconds";
+        const speed4 = 80;
+function typeText4() {
+  for (let i = 0; i < text4.length; i++) {
+    setTimeout(function() {
+      if (text4[i] === '*') {
+        typingText4.innerHTML += '<br>';
+      } else {
+        typingText4.innerHTML += text4[i];
+      }
+    }, i * speed4);
+        }
+      }
+      typeText4();       
+        
+      break;
+case query.includes("qr"):
+	case query.includes("qr not"):
+		case query.includes("qr code"):
+			case query.includes("qr promo"):
+	case query.includes("qr coupon"):
+case query.includes("coupon"):
+case query.includes("widget not"):
+case query.includes("not open"):
+        const typingText5 = document.getElementById("search-result");
+        typingText5.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text5 = "Okay! You should follow these steps for this!   **1.Scan and print a bill with atleast one promo item.*Cross check the Promo item barcode with Field ops app and make sure the product have sufficent promo limit *(You can check the limit in the store widget report.)   **2.Make sure the bill is uploading to the jarvis and its parsing properly.    * (Tranasaction Completed message is flashing means the bill is parsing.Contact the Data ops team for the Template update if the bills are not parsing.)  ** QR CODE COUPON SHOULD GENERATE IN THE SYSTEM IF THE ABOVE STEPS ARE FOLLOWING PROPERLY !!!     **3. Need to check the widget logs to figer out the reason for QR code not printing. Feel free to ask me the error code you found in the log.   **(examples: unable to locate gs path, error printing qr file, promo item 0";
+      // define the typing speed in milliseconds";
+      
+      const speed5 = 80;
+function typeText5() {
+  for (let i = 0; i < text5.length; i++) {
+    setTimeout(function() {
+      if (text5[i] === '*') {
+        typingText5.innerHTML += '<br>';
+      } else {
+        typingText5.innerHTML += text5[i];
+      }
+    }, i * speed5);
+        }
+      }
+      typeText5(); 
+break;
+case query.includes("techops"):
+	case query.includes("backend"):
+		case query.includes("back end"):
+			case query.includes("backend team"):
+	case query.includes("team"):
+        const typingText6 = document.getElementById("search-result");
+        typingText6.innerHTML = '<p id="typing-text"></p>';
+
+        const text6 = "Our backend team members are    **Vishnu saji   *Ranjeet mandal   *Prakash Devaiah    *Yogen Solanki     *Mohammad Sadan  *Mirza Rahman.    **You can reach out to them for ny kind of technical issues. You should post your issues in backend group and tag @techops."
+      // define the typing speed in milliseconds";
+const speed6 = 80;
+function typeText6() {
+  for (let i = 0; i < text6.length; i++) {
+    setTimeout(function() {
+      if (text6[i] === '*') {
+        typingText6.innerHTML += '<br>';
+      } else {
+        typingText6.innerHTML += text6[i];
+      }
+    }, i * speed6);
+        }
+      }
+      typeText6(); 
+break;
+
+case query.includes("upgrade box"):
+	case query.includes("upgrade genie"):
+		case query.includes("widget upgrade"):
+			case query.includes("upgrade"):
+        const typingText7 = document.getElementById("search-result");
+        typingText7.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text7 = "Oh sorry! i canot say this to you. Because you cant do it until unless get backend access. *Contact @techops for such cases.";
+     // define the typing speed in milliseconds";
+        const speed7 = 80;
+        function typeText7() {
+  for (let i = 0; i < text7.length; i++) {
+    setTimeout(function() {
+      if (text7[i] === '*') {
+        typingText7.innerHTML += '<br>';
+      } else {
+        typingText7.innerHTML += text7[i];
+      }
+    }, i * speed7);
+        }
+      }
+      typeText7(); 
+break;
+		  case query.includes("bill skip"):
+	case query.includes("<50"):
+		case query.includes("skip"):
+			case query.includes("unable to parse"):
+		  case query.includes("Promo bill not upload"):
+case query.includes("skipping"):
+        const typingText8 = document.getElementById("search-result");
+        typingText8.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text8 = "Maybe OCR installation will solve this issue.So try to enable ocr once.        ** Else do these steps one one one           **1. End task the Genie XL and Ushop services.     *2.Delete the %temp% files    *3.Open %appdata% rdskytech\genie xl\lib\ delete last_bill.json and parsing.json.      *4.Start RS Genie XL and sync the data     *5.Start Ushop widget. Then scan and print a fresh bill.      **Do re-register the device and reinstall the Genie xl if you are unable to fix this!      **Contact Backend team if req!!!";
+     // define the typing speed in milliseconds";
+        const speed8 = 80;
+        function typeText8() {
+  for (let i = 0; i < text8.length; i++) {
+    setTimeout(function() {
+      if (text8[i] === '*') {
+        typingText8.innerHTML += '<br>';
+      } else {
+        typingText8.innerHTML += text8[i];
+      }
+    }, i * speed8);
+        }
+      }
+      typeText8(); 
+break;
+case query.includes("424"):
+        const typingText9 = document.getElementById("search-result");
+        typingText9.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text9 = "You should reinstall the Genie XL with 8.7!      **Follow these steps for the 424 error solution!     **1. End task the RS Genie XL and ushop.    **2.Delete the %temp% files.    **3.Delete the GenieXL folder from %appdata%.    **4.Re-Register the device    **5.Download and Install the Genie XL 8.7   **Contact backend team if you are unable to solve!";   
+  // define the typing speed in milliseconds";
+        const speed9 = 80;
+        function typeText9() {
+  for (let i = 0; i < text9.length; i++) {
+    setTimeout(function() {
+      if (text9[i] === '*') {
+        typingText9.innerHTML += '<br>';
+      } else {
+        typingText9.innerHTML += text9[i];
+      }
+    }, i * speed9);
+        }
+      }
+      typeText9(); 
+break;
+case query.includes("bitmap"):
+case query.includes("failed to select"):
+        const typingText10 = document.getElementById("search-result");
+        typingText10.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text10 = "Windows update required for this issue. Take backend team support instantly, because need more experiance to do this";
+     // define the typing speed in milliseconds";
+        const speed10 = 80;
+        function typeText10() {
+  for (let i = 0; i < text10.length; i++) {
+    setTimeout(function() {
+      if (text10[i] === '*') {
+        typingText10.innerHTML += '<br>';
+      } else {
+        typingText10.innerHTML += text10[i];
+      }
+    }, i * speed10);
+        }
+      }
+      typeText10(); 
+break;
+		  case query.includes("500"):
+			case query.includes("502"):
+        const typingText11 = document.getElementById("search-result");
+        typingText11.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text11 = "500 error means,   the server is not working properly. So just post the log in the group and tag @techops.    *They will fix that from backend side.";
+  // define the typing speed in milliseconds";
+        const speed11 = 80;
+        function typeText11() {
+  for (let i = 0; i < text11.length; i++) {
+    setTimeout(function() {
+      if (text11[i] === '*') {
+        typingText11.innerHTML += '<br>';
+      } else {
+        typingText11.innerHTML += text11[i];
+      }
+    }, i * speed11);
+        }
+      }
+      typeText11(); 
+break;
+case query.includes("QR installation"):
+case query.includes("QR setup"):
+case query.includes("QR configuration"):
+        const typingText12 = document.getElementById("search-result");
+        typingText12.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text12 = "Follow the setps for QR code installation and configuration!     **1.Activate testmade and select gs     **2.Copy the gsfile path. (C:\Program Files\gs\gs9.22\bin\gswin64.exe)    **3.paste the path to gs location in widget.    **4.paste the bin path in environment variables (C:\Program Files\gs\gs9.22\bin\)      **maybe you cant do this with only the instructions. Watch the video if req!";
+     // define the typing speed in milliseconds";
+        const speed12 = 80;
+        function typeText12() {
+  for (let i = 0; i < text12.length; i++) {
+    setTimeout(function() {
+      if (text12[i] === '*') {
+        typingText12.innerHTML += '<br>';
+      } else {
+        typingText12.innerHTML += text12[i];
+      }
+    }, i * speed12);
+        }
+      }
+      typeText12(); 
+break;
+		  case query.includes("failed to connect"):
+
+        const typingText13 = document.getElementById("search-result");
+        typingText13.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text13 = "Re installation require here.     ** Download Register device and RS Genie xl and install it properly.   ** dont run genie installer for this case. Because CutePDF will be reinstall on this action, SO printer mapping will loss sometimes.";
+    // define the typing speed in milliseconds";
+        const speed13 = 80;
+        function typeText13() {
+  for (let i = 0; i < text13.length; i++) {
+    setTimeout(function() {
+      if (text13[i] === '*') {
+        typingText13.innerHTML += '<br>';
+      } else {
+        typingText13.innerHTML += text13[i];
+      }
+    }, i * speed13);
+        }
+      }
+      typeText13(); 
+break;
+
+ case query.includes("device already"):
+case query.includes("already"):
+case query.includes("register already"):
+
+        const typingText14 = document.getElementById("search-result");
+        typingText14.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text14 = "1.If installed XL then stop services from task manager**Then open RUN->%appdata%->RdSkyTech->GenieXL->cert->delete pos.crt & pos.key** Now try to register again and install Geniexl*** 2.contact backend team if you are unable to solve.";
+    // define the typing speed in milliseconds";
+        const speed14 = 80;
+        function typeText14() {
+  for (let i = 0; i < text14.length; i++) {
+    setTimeout(function() {
+      if (text14[i] === '*') {
+        typingText14.innerHTML += '<br>';
+      } else {
+        typingText14.innerHTML += text14[i];
+      }
+    }, i * speed14);
+        }
+      }
+      typeText14(); 
+break;
+
+ case query.includes("blank bill"):
+case query.includes("empty"):
+case query.includes("blank"):
+
+        const typingText15 = document.getElementById("search-result");
+        typingText15.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text15 = "Use paper page size as 80X297 in CutePDF Writer.This will solve blank bill uploading issue.** Try original drivers if unable solve with page size.**";
+    // define the typing speed in milliseconds";
+        const speed15 = 80;
+        function typeText15() {
+  for (let i = 0; i < text15.length; i++) {
+    setTimeout(function() {
+      if (text15[i] === '*') {
+        typingText15.innerHTML += '<br>';
+      } else {
+        typingText15.innerHTML += text15[i];
+      }
+    }, i * speed15);
+        }
+      }
+      typeText15(); 
+break;
+
+
+ case query.includes("side"):
+case query.includes("cutting"):
+case query.includes("cut"):
+case query.includes("bill cut"):
+case query.includes("offset"):
+        const typingText16 = document.getElementById("search-result");
+        typingText16.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text16 = "1.Open regedit--> Hkey current_user software/rdskytech/genie**use offset in mm in (- sign or + sign)  accordingly bill shifting size.**move to left -0.1 0.0 to -0.9 0.0**move to right 0.1 0.0 to 0.9 0.0**move to top -0.1 0.0 to -0.9 0.0** move to bottom 0.1 0.0 to 0.9 0.0*(Now adjust as required in inch)";
+    // define the typing speed in milliseconds"; 
+        const speed16 = 80;
+        function typeText16() {
+  for (let i = 0; i < text16.length; i++) {
+    setTimeout(function() {
+      if (text16[i] === '*') {
+        typingText16.innerHTML += '<br>';
+      } else {
+        typingText16.innerHTML += text16[i];
+      }
+    }, i * speed16);
+        }
+      }
+      typeText16(); 
+break;
+
+
+
+ case query.includes("testmode not"):
+case query.includes("test mode not"):
+case query.includes("test mode"):
+case query.includes("testmode"):
+
+        const typingText17 = document.getElementById("search-result");
+        typingText17.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text17 = "1.Testmode is not getting activated?**open jarvis-->troubleshoot-->activate testmode*check device offline issue if jarvis says unable to do testmode.** 2.Testmode activated from jarvis but not reflecting on widget?**check the registry value in regedit.exe by Run>regedit> HKEY_CURRENT_USER\Software\RdSkyTech. ->Genie-> FOR GENIE XL (gxl://) FOR GENIE X (Generic/Text only)";
+    // define the typing speed in milliseconds"; 
+        const speed17 = 80;
+        function typeText17() {
+  for (let i = 0; i < text17.length; i++) {
+    setTimeout(function() {
+      if (text17[i] === '*') {
+        typingText17.innerHTML += '<br>';
+      } else {
+        typingText17.innerHTML += text17[i];
+      }
+    }, i * speed17);
+        }
+      }
+      typeText17(); 
+break;
+
+
+ case query.includes("ur name"):
+case query.includes("your name"):
+case query.includes("or bot"):
+case query.includes("human or bot"):
+case query.includes("a human"):
+case query.includes("human or bot"):
+case query.includes("you"):
+
+        const typingText18 = document.getElementById("search-result");
+        typingText18.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text18 = "Im Tessa! Im a bot. *Here to support TSE's on Ground.";
+    // define the typing speed in milliseconds"; 
+        const speed18 = 80;
+        function typeText18() {
+  for (let i = 0; i < text18.length; i++) {
+    setTimeout(function() {
+      if (text18[i] === '*') {
+        typingText18.innerHTML += '<br>';
+      } else {
+        typingText18.innerHTML += text18[i];
+      }
+    }, i * speed18);
+        }
+      }
+      typeText18(); 
+break;
+
+
+
+ case query.includes("developed"):
+
+
+        const typingText19 = document.getElementById("search-result");
+        typingText19.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text19 = "vishnu saji developed me!";
+    // define the typing speed in milliseconds"; 
+        const speed19 = 80;
+        function typeText19() {
+  for (let i = 0; i < text19.length; i++) {
+    setTimeout(function() {
+      if (text19[i] === '*') {
+        typingText19.innerHTML += '<br>';
+      } else {
+        typingText19.innerHTML += text19[i];
+      }
+    }, i * speed19);
+        }
+      }
+      typeText19(); 
+break;
+		  case query.includes("thanks"):
+case query.includes("thank you"):
+
+
+        const typingText20 = document.getElementById("search-result");
+        typingText20.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text20 = "You are welcome!";
+    // define the typing speed in milliseconds"; 
+        const speed20 = 80;
+        function typeText20() {
+  for (let i = 0; i < text20.length; i++) {
+    setTimeout(function() {
+      if (text20[i] === '*') {
+        typingText20.innerHTML += '<br>';
+      } else {
+        typingText20.innerHTML += text20[i];
+      }
+    }, i * speed20);
+        }
+      }
+      typeText20(); 
+break;
+case query.includes("genie xl"):
+
+
+        const typingText21 = document.getElementById("search-result");
+        typingText21.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text21 = "Genie xl is the software that we are using for promotion purposes.* The installation contain sets of some applications along the genie xl.*Genie xl production id will be a 5 digit number(12532)* A virtual production id, device also know as a genie xl.";
+    // define the typing speed in milliseconds"; 
+        const speed21 = 80;
+        function typeText21() {
+  for (let i = 0; i < text21.length; i++) {
+    setTimeout(function() {
+      if (text21[i] === '*') {
+        typingText21.innerHTML += '<br>';
+      } else {
+        typingText21.innerHTML += text21[i];
+      }
+    }, i * speed21);
+        }
+      }
+      typeText21(); 
+break;
+case query.includes("thanks"):
+case query.includes("thank"):
+
+
+        const typingText22 = document.getElementById("search-result");
+        typingText22.innerHTML = '<p id="typing-text"></p>';
+
+        // define the text to be typed
+        const text22 = "You are welcome!";
+    // define the typing speed in milliseconds"; 
+        const speed22 = 80;
+        function typeText22() {
+  for (let i = 0; i < text22.length; i++) {
+    setTimeout(function() {
+      if (text22[i] === '*') {
+        typingText22.innerHTML += '<br>';
+      } else {
+        typingText22.innerHTML += text22[i];
+      }
+    }, i * speed22);
+        }
+      }
+      typeText22(); 
+break;
+
+
+default:
+      document.getElementById("search-result").innerHTML = "I apologize, but I'm unable to provide an answer for this. It seems to be beyond my current training. <br>I recommended asking for any relevant details from Techops using the appropriate short keys like. <br>Genie XL offline, device offline, QR issue, data uploading issue...etc";
+  }
+}
+</script>
